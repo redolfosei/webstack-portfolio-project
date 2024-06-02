@@ -1,3 +1,4 @@
+import './filter.scss';
 function Filter() {
   return (
   <div className="filter">
@@ -45,10 +46,11 @@ function Filter() {
       <div className="item">
         <label htmlFor="bedroom">Bedroom</label>
         <input type="text" id="bedroom" name="bedroom" placeholder="..." />
+      </div>
         <button>
           <img src="/search.png" alt="" />
         </button>
-      </div>
+      
 
     </div>
   </div>
