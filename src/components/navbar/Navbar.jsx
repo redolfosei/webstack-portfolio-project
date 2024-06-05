@@ -4,6 +4,8 @@ import "./navbar.scss"
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+
+  const user = true
   return (
     <nav>
       <div className="left">
@@ -17,10 +19,23 @@ function Navbar() {
         <Link href="/">Agents</Link>
       </div>
       <div className="right">
-        <Link href="/">Sign In</Link>
-        <Link href="/" className="register">
-          Sign Up
-        </Link>
+        {user ? (
+          <div className="user">
+            <img src="https://media.licdn.com/dms/image/D4E03AQFIr0pmhfMyuw/profile-displayphoto-shrink_800_800/0/1683710898586?e=1723075200&v=beta&t=xUyQmRzKiYvcbik29N-VxH_YTocRnz95aW5EOs30EC4" alt="" />
+          <span>Redolf Osei</span>
+          <Link to="/profile" className="profile">
+            <div className="notification">3</div>
+            <span>Profile</span>
+          </Link>
+          </div>
+        ) : (
+          <>
+            <Link href="/">Sign In</Link>
+            <Link href="/" className="register">
+              Sign Up
+            </Link>
+          </>
+        )}
         <div className="menuIcon">
           <img
             src="/menu.png"
